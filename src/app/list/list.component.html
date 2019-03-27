@@ -1,0 +1,22 @@
+Data pribadi:
+
+<app-detail [dataDiri]="list"></app-detail>
+<hr>
+<table>
+    <thead>
+        <tr >
+            <td>Nama</td>
+            <td>Alamat</td>	            
+            <td>Umur</td>	           
+            <td>Aktif</td>	            
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let data of list">
+            <app-cell [dataPribadi]="data" [jabatan]="jabatan"(clicked2)="clickedHandler2($event)"(clicked)="clickedHandler($event)"></app-cell>
+            
+        </tr>
+    </tbody>
+</table>
+
+jumlah di click: {{counterClick}}

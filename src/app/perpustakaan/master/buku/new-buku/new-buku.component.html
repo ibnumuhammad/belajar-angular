@@ -1,0 +1,25 @@
+<form [formGroup]="formGroup" (submit)="send($event)">
+  <div>
+    <label for="nama">nama</label>
+    <input type="text" name="nama" id="nama" formControlName="nama">
+    <span *ngIf=!formGroup.controls.nama.valid> 
+      <div *ngIf= "formGroup.controls.nama.errors.required">name is required</div>
+    </span>
+  </div>
+  <div>
+    <label for="isbn">isbn</label>
+    <input type="text" name="isbn" id="isbn" formControlName="isbn">
+  </div>
+  <div>
+    <label for="penerbit">penerbit</label>
+    <input type="text" name="penerbit" id="penerbit" formControlName="penerbit">
+  </div>
+  <div>
+    <label for="rak">rak</label>
+    <input type="text" name="rak" id="rak" formControlName="rak">
+  </div>
+  <div>
+    <label for="kategori">kategori</label>
+    <input type="text" name="kategori" id="kategori" formControlName="kategori">
+  </div>
+</form>

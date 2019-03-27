@@ -1,0 +1,44 @@
+<p>
+  pembelian works!
+</p>
+
+<form [formGroup]="formGroup"(submit)="submitted()">
+  <div formGroupName="customer">
+    <label for="customer">customer name</label>
+    <select name="customerName" formControlName="id">
+      <option value="001">ibnu</option>
+      <option value="002">ismail</option>
+      <option value="003">faisal</option>
+      <option value="004">khairul</option>
+      <option value="005">dear</option>
+    </select>
+  </div>
+  <div>
+    <button (click)="addItems()">add items</button>
+  </div>
+
+  <div formArrayName="items">
+    <table>
+      <thead>
+        <tr>
+          <td>Product name</td>
+          <td>Qty</td>
+          <td>price</td>
+          <td>Sub Total</td>
+        </tr>
+      </thead>
+      <tbody *ngFor="let item of items.controls; let i=index">
+        <tr [formGroupName]="i">
+          <td formGroupName = "item">
+            <select name="productName" id="product" formControlName="id">
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
+            </select>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</form>

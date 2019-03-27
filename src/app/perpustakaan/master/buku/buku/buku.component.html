@@ -1,0 +1,22 @@
+<p>
+  buku works!
+</p>
+
+<table>
+  <tr>
+    <td>Nama</td>
+    <td>ISBN</td>
+    <td>penerbit</td>
+    <td>rak</td>
+    <td>kategori</td>
+  </tr>
+  <tbody>
+    <tr *ngFor="let data of list">
+      <td>{{data.nama}}</td>
+      <td>{{data.isbn}}</td>
+      <td>{{data.penerbit}}</td>
+      <td>{{data.rak}}</td>
+      <td>{{data.kategori}}</td>
+    </tr>
+  </tbody>
+</table>
